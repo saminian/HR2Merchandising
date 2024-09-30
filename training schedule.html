@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    
+</head>
+<body>
+   
+    <aside id="sidebar" class="sidebar-expanded">
+        <button id="toggle-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    
+        <h1 class="dashboard-text">MENU</h1>
+        <h1><a href="dashboard.html" class="dashboard-text">Learning Management</a></h1>
+        <ul>
+            <li><a href="training schedule.html">Training Schedule</a></li>
+            <li><a href="WTA.html">Workshop Training & Training Assessment</a></li>
+        </ul>
+        <h1 class="dashboard-text">Performance Management</h1>
+        <ul>
+            <li><a href="#">Attendance Monitoring</a></li>
+            <li><a href="#">Employee Trainee status</a></li>
+            <li><a href="#">Employee performance survey</a></li>
+            <li><a href="#">Integration</a></li>
+        </ul>
+    </aside>
+
+    <nav class="navbar">
+      <div class="navbar-links">
+        <div class="notification">🔔</div>
+  
+        <div class="profile">
+          <img src="logo/GWAM Logo.jpg" alt="Profile" class="profile-img">
+        </div>
+        </div>
+      </nav>
+
+    <main id="main-content" class="main-content dashboard">
+        <h2 style= "background-color:#f3dc0c9a" Learning Management></h2></br>
+        <h3>Training Schedule</h3>
+
+        <div class="container">
+            <div class="section" id="traineeList" text-align="right">
+                <h2 style="color:rgb(8, 8, 8);"class="text-2l font-semibold" text-align="left">Trainee list</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                        
+                        <tbody id="traineeViewList" class="font-sans text-yellow-300 text-lg font-small bg-black-100 border border-transparent-300 text-center">
+                            <!-- Trainees will be inserted here -->
+                        </tbody>
+                        
+                        <!-- Trainees will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="modal" id="taskScheduleModal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2>Assign Task and Schedule</h2>
+                    <form id="taskScheduleForm">
+                        <input type="text" id="modalName" readonly>
+                        <input type="text" id="modalDepartment" readonly>
+                        <input type="email" id="modalEmail" readonly>
+                        
+                        <label for="task">Select Task:</label>
+                        <select id="task" required>
+                            <option value="" disabled selected>Select a task</option>
+                            <option value="Task 1">Task 1</option>
+                            <option value="Task 2">Task 2</option>
+                            <option value="Task 3">Task 3</option>
+                            <option value="Task 4">Task 4</option>
+                            <option value="Task 5">Task 5</option>
+                        </select>
+            
+                        <input type="date" id="date" required>
+                        <input type="time" id="time" required>
+                        <button type="submit">Assign Training</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="modal" id="editScheduleModal">
+                <div class="modal-content">
+                    <span class="close" id="closeEditModal">&times;</span>
+                    <h2>Edit Task and Schedule</h2>
+                    <form id="editTaskScheduleForm">
+                        <input type=" hidden" id="editScheduleId">
+                        <input type="text" id="editModalName" readonly>
+                        <input type="text" id="editModalDepartment" readonly>
+                        <input type="email" id="editModalEmail" readonly>
+                        
+                        <label for="editTask">Select Task:</label>
+                        <select id="editTask" required>
+                            <option value="" disabled selected>Select a task</option>
+                            <option value="Task 1">Task 1</option>
+                            <option value="Task 2">Task 2</option>
+                            <option value="Task 3">Task 3</option>
+                            <option value="Task 4">Task 4</option>
+                            <option value="Task 5">Task 5</option>
+                        </select>
+            
+                        <input type="date" id="editDate" required>
+                        <input type="time" id="editTime" required>
+                        <button type="submit">Update Task</button>
+                    </form>
+                </div>
+            </div>
+    
+            <div class="section" id="viewSchedule">
+            </br> <h2 style="color:black;"class="text-2l font-semibold" text-align="left">View Scheduled Employees</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                            <th>Assign training</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Action</th>
+               </tr>
+                    </thead>
+                <tbody id="scheduledEmployeesTable" class="font-sans text-yellow-300 text-lg font-small bg-black-100 border border-transparent-300 text-center"></tbody>            <!-- Scheduled employees will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
+

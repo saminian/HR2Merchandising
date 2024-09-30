@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    
+</head>
+<body>
+   
+    <aside id="sidebar" class="sidebar-expanded">
+        <button id="toggle-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    
+        <h1 class="dashboard-text">MENU</h1>
+        <h1><a href="dashboard.html" class="dashboard-text">Learning Management</a></h1>
+        <ul>
+            <li><a href="training schedule.html">Training Schedule</a></li>
+            <li><a href="WTA.html">Workshop Training & Training Assessment</a></li>
+        </ul>
+        <h1 class="dashboard-text">Performance Management</h1>
+        <ul>
+            <li><a href="#">Attendance Monitoring</a></li>
+            <li><a href="#">Employee Trainee status</a></li>
+            <li><a href="#">Employee performance survey</a></li>
+            <li><a href="#">Integration</a></li>
+        </ul>
+    </aside>
+
+    <nav class="navbar">
+      <div class="navbar-links">
+        <div class="notification">🔔</div>
+  
+        <div class="profile">
+          <img src="logo/GWAM Logo.jpg" alt="Profile" class="profile-img">
+        </div>
+        </div>
+      </nav>
+
+    <main id="main-content" class="main-content dashboard">
+        <h2 style= "background-color:#f3dc0c9a">Learning Management</h2></br>
+
+        <div class="stats-container">
+          <div class="stat-box">
+            <div class="stat-title">Total Trainees</div>
+            <div class="stat-value">30</div>
+            <div class="total-trainee">Trainees</div>
+          </div>
+      
+          <div class="stat-box">
+            <div class="stat-title">In progress</div></br>
+          <div class="stat-value">16</div>
+            <div class="in-progress">Trainees</div>
+          </div>
+      
+          <div class="stat-box">
+            <div class="stat-title">Completed</div></br>
+            <div class="stat-value">14</div>
+            <div class="completed">Completed</div>
+          </div>
+        </div>
+      
+        </main>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>

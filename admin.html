@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Schedule Management - Onboarding</title>
+    <link rel="stylesheet" href="training schedule.html">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Onboarding Section -->
+        <div class="section" id="onboarding">
+            <h2>Onboarding</h2>
+            <form id="onboardingForm">
+                <input type="text" id="name" placeholder="Employee Name" required>
+                <input type="text" id="department" placeholder="Department" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="button" id="addTraineeButton">Add to Trainee List</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mock data to store trainees
+        let trainees = JSON.parse(localStorage.getItem('trainees')) || [];
+
+        // Onboarding Form Submission
+        document.getElementById('addTraineeButton').addEventListener('click', function () {
+            const name = document.getElementById('name').value;
+            const department = document.getElementById('department').value;
+            const email = document.getElementById('email').value;
+
+            // Add new trainee to the list
+            trainees.push({ name, department, email });
+            localStorage.setItem('trainees', JSON.stringify(trainees)); // Store in localStorage
+
+            // Redirect to trainee list page
+            window.location.href = 'training schedule.html';
+        });
+    </script>
+</body>
+</html>
