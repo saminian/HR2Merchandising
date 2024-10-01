@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class=" d-flex bg-primary border-color border-top border-bottom flex-align-center padding-medium">
+        <button onclick="onToggle()" class="btn border-none bg-transparent "><img src="img/menu.png" width="40"
+                alt=""></button>
+        <a href=""><img src="img/logo1.png" width="80" alt=""></a>
+    </nav>
+    <div class="container">
+        <div class="d-flex bg-primary view-height-100">
+            <div class="sidebar text-white border-right text-center border-color ">
+                <a href="index.html" class="text-white">
+                    <h1> Employee <br>Monitoring</h1>
+                </a>
+
+                <br>
+                <h2>Learning <br>Management</h2>
+                <hr class="border-color border-bottom seperator">
+                <a href="schedule.html" class="text-white">
+                    <h3> Training Schedule</h3>
+                </a>
+
+                <a href="assessment.html" class="text-white">
+                    <h3> Training Assessment</h3>
+                </a>
+                <br>
+                <h2>Performance <br>Management</h2>
+                <hr class="border-color border-bottom seperator">
+                <h3 onclick="onDropdown()"> Performance (Criteria) &emsp; ⌵</h3>
+                <div id="dropdown">
+                    <a href="survey.html" class="text-white">
+                        <h3> Survey</h3>
+                    </a>
+                    <a href="ratings.html" class="text-white">
+                        <h3> Ratings</h3>
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="main text-white">
+                <h1>Ratings</h1>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+
+</html>

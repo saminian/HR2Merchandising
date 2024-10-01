@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class=" d-flex bg-primary border-color border-top border-bottom flex-align-center padding-medium">
+        <button onclick="onToggle()" class="btn border-none bg-transparent "><img src="img/menu.png" width="40"
+                alt=""></button>
+        <a href=""><img src="img/logo1.png" width="80" alt=""></a>
+    </nav>
+    <div class="container">
+        <div class="d-flex bg-primary view-height-100">
+            <div class="sidebar text-white border-right text-center border-color ">
+                <a href="index.html" class="text-white">
+                    <h1> Employee <br>Monitoring</h1>
+                </a>
+
+                <br>
+                <h2>Learning <br>Management</h2>
+                <hr class="border-color border-bottom seperator">
+                <a href="schedule.html" class="text-white">
+                    <h3> Training Schedule</h3>
+                </a>
+
+                <a href="assessment.html" class="text-white">
+                    <h3> Training Assessment</h3>
+                </a>
+                <br>
+                <h2>Performance <br>Management</h2>
+                <hr class="border-color border-bottom seperator">
+                <h3 onclick="onDropdown()"> Performance (Criteria) &emsp; ⌵</h3>
+                <div id="dropdown">
+                    <a href="survey.html" class="text-white">
+                        <h3> Survey</h3>
+                    </a>
+                    <a href="ratings.html" class="text-white">
+
+                        <h3> Ratings</h3>
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="main text-white w-100">
+                <h1>Employee Performance Survey</h1>
+                <div class="card bg-primary padding-large " style="width: 80%;">
+                    <h4>Employee Name: <br>Deployment:</h4>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>&nbsp;1</th>
+                            <th>&nbsp;2</th>
+                            <th>&nbsp;3</th>
+                            <th>&nbsp;4</th>
+                            <th>&nbsp;5</th>
+                            <th>Total Percentage</th>
+                        </tr>
+                        <tr>
+                            <td>• Communication Skills:</td>
+                            <td><input type="radio" name="" id=""></td>
+
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+
+                        </tr>
+                        <tr>
+                            <td>• Teamwork:</td>
+                            <td><input type="radio" name="" id=""></td>
+
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><p>80%</p></td>
+
+                        </tr>
+                        <tr>
+                            <td>• Panctuality:</td>
+                            <td><input type="radio" name="" id=""></td>
+
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+
+                        </tr>
+                        <tr>
+                            <td>• Customer Service:</td>
+                            <td><input type="radio" name="" id=""></td>
+
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+
+                        </tr>
+                        <tr>
+                            <td>• Overall job Performance</td>
+                            <td><input type="radio" name="" id=""></td>
+
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+                            <td><input type="radio" name="" id=""></td>
+
+                        </tr>
+
+                    </table>
+                    <div class="padding-large ">
+                        <textarea class="rounded w-100 " placeholder="" name="" id="" cols="30" rows="10"></textarea>
+                        <center>
+                            <button class=" btn-submit  ">Submit </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Doughnut Chart with Percentages</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+    <canvas id="myDoughnutChart"></canvas>
+
+    <script>
+        const ctx = document.getElementById('myDoughnutChart').getContext('2d');
+        const myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Absent', 'Early-In', 'Late-In'],
+                datasets: [{
+                    label: 'Attendance',
+                    data: [5, 60, 20],
+                    backgroundColor: [
+                        '#ff3030', // Absent
+                        '#01f5ff', // Early-In
+                        '#95aed7'  // Late-In
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: true // Display the legend
+                    },
+                    datalabels: {
+                        formatter: (value, context) => {
+                            let total = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                            let percentage = (value / total * 100).toFixed(2) + '%';
+                            return percentage;
+                        },
+                        color: '#fff', // Text color for the percentage labels
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        }
+                    }
+                }
+            },
+            plugins: [ChartDataLabels] // Activate the DataLabels plugin
+        });
+    </script>
+</body>
+</html>
